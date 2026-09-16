@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class StudentMark {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter student name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter Tamil mark: ");
+        int tamil = sc.nextInt();
+
+        System.out.print("Enter English mark: ");
+        int english = sc.nextInt();
+
+        System.out.print("Enter Maths mark: ");
+        int maths = sc.nextInt();
+
+        int total = tamil + english + maths;
+        double average = total / 3.0;
+
+        System.out.println("\nStudent Name: " + name);
+        System.out.println("Total Mark: " + total);
+        System.out.println("Average: " + average);
+
+        if (average >= 50)
+            System.out.println("Result: Pass");
+        else
+            System.out.println("Result: Fail");
+
+        sc.close();
+    }
+}
+
+Output:
+Enter student name: Kanika
+Enter Tamil mark: 80
+Enter English mark: 75
+Enter Maths mark: 90
+
+Student Name: Kanika
+Total Mark: 245
+Average: 81.66666666666667
+Result: Pass
